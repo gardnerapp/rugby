@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 TextStyle headerStyle(){
   return TextStyle(
-    color: Colors.black,
+    color: Colors.white,
     fontSize: 30.0,
   );
 }
