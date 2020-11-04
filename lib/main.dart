@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rugby/components/app_bar.dart';
+import 'package:rugby/components/big_main_button.dart';
+import 'package:rugby/main_button.dart';
 
 //create game
 //rsvp to game
@@ -26,32 +28,38 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: customAppBar("Touch Rugby USA"),
-        body: Container(
-          child: GridView.count(
-            primary: false,
-            padding: const EdgeInsets.all(20),
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
-            crossAxisCount: 2,
-            children: <Widget>[
-              Container(
-                decoration: BoxDecoration(
-              color: Colors.red,
-              borderRadius: BorderRadius.all(Radius.circular(10.0))),
-                height: 10,
-                padding: const EdgeInsets.all(8),
-                child: Text("Find a Game near me ")
-              ),
-              Container(
-                padding: const EdgeInsets.all(8),
-                child: const Text('My Profile'),
-                color: Colors.white,
-              ),
-            ],
-          )
+        body: ListView(
+          padding: const EdgeInsets.all(10),
+          children: <Widget>[
+            Work(),
+            BigMainButton("Play Now", Colors.red),
+            BigMainButton("Create a Match", Colors.white),
+            BigMainButton("My Player", Colors.blue),
+          ],
         ));
   }
 }
 
 //Games Near Me, Post a Game
 //add Box shadow to each of the cards
+
+class Work extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return  Card(
+        elevation: 16.0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(45.0)
+        ),
+        color: Colors.grey[300],
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            MainButton(Icons.fitness_center, Colors.red), MainButton(Icons.healing, Colors.white), MainButton(Icons.all_inclusive, Colors.blue)
+          ],
+
+        )
+    );
+  }
+}
