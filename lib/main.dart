@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rugby/components/app_bar.dart';
-import 'package:rugby/components/big_main_button.dart';
+import 'package:rugby/feeds/friend_feed.dart';
 import 'package:rugby/main_button.dart';
+import 'package:rugby/feeds/location_feed.dart';
 
 //create game
 //rsvp to game
@@ -27,16 +28,18 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: customAppBar("Touch Rugby USA"),
-        body: ListView(
-          padding: const EdgeInsets.all(10),
+        appBar: mainAppBar(),
+        body: PageView(
           children: <Widget>[
-            Work(),
-            BigMainButton("Play Now", Colors.red),
-            BigMainButton("Create a Match", Colors.white),
-            BigMainButton("My Player", Colors.blue),
+            FriendFeed(),
+            LocationFeed(),
           ],
-        ));
+        ),
+    floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: bottomBarButton(),
+      bottomNavigationBar: bottomBar(),
+
+    );
   }
 }
 

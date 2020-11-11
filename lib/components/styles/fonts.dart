@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-TextStyle headerStyle(){
+TextStyle appBarHeaderText(){
   return TextStyle(
-    color: Colors.white,
+    color: Colors.black87,
     fontSize: 30.0,
   );
 }
