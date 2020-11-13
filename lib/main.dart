@@ -3,7 +3,7 @@ import 'package:rugby/components/app_bar.dart';
 import 'package:rugby/feeds/friend_feed.dart';
 import 'package:rugby/main_button.dart';
 import 'package:rugby/feeds/location_feed.dart';
-
+import 'feeds/donations.dart';
 //create game
 //rsvp to game
 //see who is going
@@ -33,6 +33,7 @@ class Home extends StatelessWidget {
           children: <Widget>[
             FriendFeed(),
             LocationFeed(),
+            Donations()
           ],
         ),
     floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

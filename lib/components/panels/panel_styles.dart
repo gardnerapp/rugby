@@ -21,18 +21,6 @@ class MetaPanel extends StatelessWidget {
   }
 }
 
-TextStyle titleTextStyle(){
-  return TextStyle(
-    color: Colors.black, fontSize: 20.0,
-  );
-}
-
-TextStyle subTitleTextStyle(){
-  return TextStyle(
-    color: Colors.black, fontSize: 15.0,
-  );
-}
-
 class CircularLeading extends StatelessWidget {
   //passed into gesture detector Friend Takes CircularAvatar brings to profile
   //locationtakes text with the number of people going
@@ -52,6 +40,22 @@ class CircularLeading extends StatelessWidget {
 }
 
 
-//TODO next further refactor ListTIle
-//Can I conditionally render the gesture detector
-// based on the type of class being passed?
+TextStyle titleTextStyle(){
+  return TextStyle(
+    color: Colors.black, fontSize: 20.0,
+  );
+}
+
+TextStyle subTitleTextStyle(){
+  return TextStyle(
+    color: Colors.black, fontSize: 15.0,
+  );
+}
+
+TextStyle leadingTextStyle(){
+  return TextStyle(
+    color: Colors.red, fontSize: 20.0,
+  );
+}
+
+
