@@ -9,7 +9,7 @@ AppBar mainAppBar(){
         icon: Icon(Icons.person),
         splashColor: Colors.white,
         onPressed: (){
-      print("hello");
+
       //TODO Route to Friends page
         }),
   );
