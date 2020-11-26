@@ -72,7 +72,9 @@ class Profile extends StatelessWidget {
                           //play should pull up screen with games user is attending
                           children: <Widget>[
                             RawMaterialButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/match');
+                              },
                               elevation: 16.0,
                               fillColor: Colors.red,
                               splashColor: Colors.red[300],

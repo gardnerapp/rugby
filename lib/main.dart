@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rugby/components/app_bar.dart';
-import 'package:rugby/components/friends/friend_card.dart';
+import 'components/match/match.dart';
 import 'package:rugby/components/friends/friend_list.dart';
 import 'package:rugby/components/profile.dart';
 import 'package:rugby/feeds/friend_feed.dart';
@@ -25,7 +25,8 @@ class MyApp extends StatelessWidget {
       home: Home(),
       initialRoute: '/',
       routes: {
-        '/friends': (context) => FriendList()
+        '/friends': (context) => FriendList(),
+        '/match': (context) => Match()
       },
     );
   }
