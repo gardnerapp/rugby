@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rugby/components/app_bar.dart';
 import 'components/match/match.dart';
 import 'package:rugby/components/friends/friend_list.dart';
-import 'package:rugby/components/profile.dart';
+import 'package:rugby/components/profile/profile.dart';
 import 'package:rugby/feeds/friend_feed.dart';
 import 'package:rugby/main_button.dart';
 import 'package:rugby/feeds/location_feed.dart';
@@ -48,13 +48,9 @@ class Home extends StatelessWidget {
     floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: bottomBarButton(),
       bottomNavigationBar: bottomBar(),
-
     );
   }
 }
-
-//Games Near Me, Post a Game
-//add Box shadow to each of the cards
 
 class Work extends StatelessWidget {
   @override

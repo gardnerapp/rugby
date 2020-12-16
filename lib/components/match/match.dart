@@ -47,6 +47,7 @@ class Who extends StatelessWidget {
 }
 
 class UserGoing extends StatelessWidget {
+  //TODO Add Name
   @override
   Widget build(BuildContext context) {
     return Container(
