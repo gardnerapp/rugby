@@ -8,6 +8,7 @@ class Profile extends StatelessWidget {
     return ListView(
       children: <Widget>[
         PlayerInfoView(),
+        //Social Actions
         Stats(),
       ],
     );
@@ -18,3 +19,5 @@ class Profile extends StatelessWidget {
 
 
 //todo refactor stat text, stat container, add picture, possible move mates and name to top
+//todo mates page => button for friends
+//todo Social Invite to game, Add a mate,View mates 

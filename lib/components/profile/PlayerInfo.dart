@@ -32,254 +32,129 @@ class PlayerInfoView extends StatelessWidget {
                         left: 8, right: 8, top: 4),
                     child: Column(
                       children: <Widget>[
-                        Row(
-                          children: <Widget>[
-                            Container(
-                              height: 40,
-                              width: 2,
-                              decoration: BoxDecoration(
-                                  color: Colors.black87.withOpacity(.5),
-                                  borderRadius: BorderRadius.all(
-                                      Radius.circular(4.0))
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 4, bottom: 2),
-                                    child: Text(
-                                      'Name',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 16,
-                                        letterSpacing: -0.1,
-                                        color: Colors.black87.withOpacity(0.5),
-                                      ),
-                                    ),
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                    children: <Widget>[
-                                      Padding(padding:
-                                      const EdgeInsets.only(left: 4, bottom: 3),
-                                        child: Text("Corey Gardner",
-                                          //TODO refactor text style
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 16.0,
-                                              letterSpacing: 1.0
-                                          ),),
-                                      ),
-                                    ],
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                        Row(
-                        children: <Widget>[
-                          Container(
-                            height: 40,
-                            width: 2,
-                            decoration: BoxDecoration(
-                                color: Colors.red.withOpacity(.5),
-                                borderRadius: BorderRadius.all(
-                                    Radius.circular(4.0))
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 4, bottom: 2),
-                                  child: Text(
-                                    'Club',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 16,
-                                      letterSpacing: -0.1,
-                                      color: Colors.red.withOpacity(0.5),
-                                    ),
-                                  ),
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                  children: <Widget>[
-                                    Padding(padding:
-                                      const EdgeInsets.only(left: 4, bottom: 3),
-                                      child: Text("ICRFC",
-                                        //TODO refactor text style
-                                        style: TextStyle(
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 16.0,
-                                          letterSpacing: 1.0
-                                      ),),
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                        Row(
-                          children: <Widget>[
-                            Container(
-                              height: 40,
-                              width: 2,
-                              decoration: BoxDecoration(
-                                  color: Colors.blue.withOpacity(.5),
-                                  borderRadius: BorderRadius.all(
-                                      Radius.circular(4.0))
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 4, bottom: 2),
-                                    child: Text(
-                                      'Position',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 16,
-                                        letterSpacing: -0.1,
-                                        color: Colors.blue.withOpacity(0.5),
-                                      ),
-                                    ),
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                    children: <Widget>[
-                                      Padding(padding:
-                                      const EdgeInsets.only(left: 4, bottom: 3),
-                                        child: Text("Lock",
-                                          //TODO refactor text style
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 16.0,
-                                              letterSpacing: 1.0
-                                          ),),
-                                      ),
-                                    ],
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                        Row(
-                          children: <Widget>[
-                            Container(
-                              height: 40,
-                              width: 2,
-                              decoration: BoxDecoration(
-                                  color: Colors.deepOrange.withOpacity(.5),
-                                  borderRadius: BorderRadius.all(
-                                      Radius.circular(4.0))
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 4, bottom: 2),
-                                    child: Text(
-                                      'Mates',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 16,
-                                        letterSpacing: -0.1,
-                                        color: Colors.deepOrange.withOpacity(0.5),
-                                      ),
-                                    ),
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                    children: <Widget>[
-                                      Padding(padding:
-                                      const EdgeInsets.only(left: 4, bottom: 3),
-                                        child: Text("50",
-                                          //TODO refactor text style
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 16.0,
-                                              letterSpacing: 1.0
-                                          ),),
-                                      ),
-                                    ],
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
+                        PlayerDetails("Name","Corey Gardner", Colors.black87),
+                        PlayerDetails("Club", "ICRF", Colors.red),
+                        PlayerDetails("Position", "Clean Out", Colors.blue),
+                        PlayerDetails("Mates", 50.toString(), Colors.orange),
                       ],
                     ),
                   )),
-                  Padding(
-                      padding: const EdgeInsets.only(right: 16),
-                      child: Center(
-                        child: Stack(overflow: Overflow.visible,
-                        children: <Widget>[
-                          Padding(padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            width: 105,
-                            height: 105,
-                            decoration: BoxDecoration(
-                              color: Colors.red.withOpacity(.5),
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(100.0)
-                              ),
-                              border: new Border.all(
-                                width: 4,
-                                color: Colors.blue.withOpacity(.5)
-                              ),
-                            ),
-                            child: Column( //pic
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-
-                              ],
-                            ),
-                          ),
-                          )
-                        ],
-                        ),
-                      ))
+                  PlayerPic(),
                 ],
               ),
             )
           ],
         ),
       ),
+    );
+  }
+}
+
+class PlayerPic extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return  Padding(
+        padding: const EdgeInsets.only(right: 16),
+        child: Center(
+          child: Stack(
+            overflow: Overflow.visible,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: 110,
+                  height: 110,
+                  decoration: BoxDecoration(
+                    color: Colors.red.withOpacity(.5),
+                    borderRadius:
+                    BorderRadius.all(Radius.circular(100.0)),
+                    border: new Border.all(
+                        width: 4,
+                        color: Colors.blue.withOpacity(.5)),
+                  ),
+                  child: Column(
+                    //TODO pic
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[],
+                  ),
+                ),
+              )
+            ],
+          ),
+        ));
+  }
+}
+
+
+class PlayerDetails extends StatelessWidget {
+  final String title;
+  final String info;
+  final Color color;
+
+  PlayerDetails(this.title, this.info, this.color);
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        Container(
+          height: 40,
+          width: 2,
+          decoration: BoxDecoration(
+              color: this.color.withOpacity(.5),
+              borderRadius: BorderRadius.all(
+                  Radius.circular(4.0))
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(
+                    left: 4, bottom: 2),
+                child: Text(
+                  this.title,
+                  textAlign: TextAlign.center,
+                  style: titleStyle(this.color)
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.only(left: 4, bottom: 3),
+                    child: Text(
+                      this.info,
+                      style: infoStyle(this.color),
+                    ),
+                  )
+                ],
+              )
+            ],
+          ),
+        )
+      ],
+    );
+  }
+
+  TextStyle titleStyle(Color color) {
+    return TextStyle(
+      fontWeight: FontWeight.w500,
+      fontSize: 16,
+      letterSpacing: -0.1,
+      color: color.withOpacity(.5),
+    );
+  }
+
+  TextStyle infoStyle(Color color) {
+    return TextStyle(
+        fontWeight: FontWeight.w600,
+        fontSize: 16.0,
+        letterSpacing: 1.0
     );
   }
 }
