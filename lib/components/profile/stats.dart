@@ -16,8 +16,8 @@ class Stats extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           StatContainer(OffenseView()),
-          StatContainer(PenaltyView()),
           StatContainer(DefenseView()),
+          StatContainer(PenaltyView()),
         ],
       ),
     );

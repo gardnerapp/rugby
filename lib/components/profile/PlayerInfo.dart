@@ -1,41 +1,39 @@
 import 'package:flutter/material.dart';
 
-//TODO Refactor ROWS into PlayerDetails(title,info, color)
 class PlayerInfoView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(
-          left: 20, right:15, top:15, bottom: 15),
+      padding: const EdgeInsets.only(left: 20, right: 15, top: 15, bottom: 15),
       child: Container(
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(8.0),
-              bottomLeft:  Radius.circular(8.0),
-              bottomRight:  Radius.circular(8.0),
-              topRight:  Radius.circular(68.0),),
+              bottomLeft: Radius.circular(8.0),
+              bottomRight: Radius.circular(8.0),
+              topRight: Radius.circular(68.0),
+            ),
             boxShadow: <BoxShadow>[
               BoxShadow(
                   color: Colors.grey,
-                  offset: Offset(1.1,1.1),
-                  blurRadius: 10.0)]
-        ),
+                  offset: Offset(1.1, 1.1),
+                  blurRadius: 10.0)
+            ]),
         child: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.only(top: 16, left:16, right: 16),
+              padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
               child: Row(
                 children: <Widget>[
-                  Expanded(child: Padding(
-                    padding: const EdgeInsets.only(
-                        left: 8, right: 8, top: 4),
+                  Expanded(
+                      child: Padding(
+                    padding: const EdgeInsets.only(left: 8, right: 8, top: 4),
                     child: Column(
                       children: <Widget>[
-                        PlayerDetails("Name","Corey Gardner", Colors.black87),
+                        PlayerDetails("Name", "Corey Gardner", Colors.black87),
                         PlayerDetails("Club", "ICRF", Colors.red),
                         PlayerDetails("Position", "Clean Out", Colors.blue),
-                        PlayerDetails("Mates", 50.toString(), Colors.orange),
                       ],
                     ),
                   )),
@@ -53,7 +51,7 @@ class PlayerInfoView extends StatelessWidget {
 class PlayerPic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  Padding(
+    return Padding(
         padding: const EdgeInsets.only(right: 16),
         child: Center(
           child: Stack(
@@ -66,11 +64,9 @@ class PlayerPic extends StatelessWidget {
                   height: 110,
                   decoration: BoxDecoration(
                     color: Colors.red.withOpacity(.5),
-                    borderRadius:
-                    BorderRadius.all(Radius.circular(100.0)),
+                    borderRadius: BorderRadius.all(Radius.circular(100.0)),
                     border: new Border.all(
-                        width: 4,
-                        color: Colors.blue.withOpacity(.5)),
+                        width: 4, color: Colors.blue.withOpacity(.5)),
                   ),
                   child: Column(
                     //TODO pic
@@ -86,13 +82,13 @@ class PlayerPic extends StatelessWidget {
   }
 }
 
-
 class PlayerDetails extends StatelessWidget {
   final String title;
   final String info;
   final Color color;
 
   PlayerDetails(this.title, this.info, this.color);
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -102,9 +98,7 @@ class PlayerDetails extends StatelessWidget {
           width: 2,
           decoration: BoxDecoration(
               color: this.color.withOpacity(.5),
-              borderRadius: BorderRadius.all(
-                  Radius.circular(4.0))
-          ),
+              borderRadius: BorderRadius.all(Radius.circular(4.0))),
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
@@ -113,13 +107,9 @@ class PlayerDetails extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(
-                    left: 4, bottom: 2),
-                child: Text(
-                  this.title,
-                  textAlign: TextAlign.center,
-                  style: titleStyle(this.color)
-                ),
+                padding: const EdgeInsets.only(left: 4, bottom: 2),
+                child: Text(this.title,
+                    textAlign: TextAlign.center, style: titleStyle(this.color)),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -152,9 +142,6 @@ class PlayerDetails extends StatelessWidget {
 
   TextStyle infoStyle(Color color) {
     return TextStyle(
-        fontWeight: FontWeight.w600,
-        fontSize: 16.0,
-        letterSpacing: 1.0
-    );
+        fontWeight: FontWeight.w600, fontSize: 16.0, letterSpacing: 1.0);
   }
 }
