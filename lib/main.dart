@@ -26,7 +26,6 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/friends': (context) => FriendList(),
-        '/match': (context) => Match()
       },
     );
   }
@@ -39,8 +38,9 @@ class Home extends StatelessWidget {
         appBar: mainAppBar(),
         body: PageView(
           children: <Widget>[
-            Profile(),
+            Match(),
             FriendFeed(),
+            Profile(),
             LocationFeed(),
             Donations()
           ],

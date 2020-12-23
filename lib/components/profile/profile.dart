@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rugby/components/profile/social.dart';
-import 'PlayerInfo.dart';
+import 'playerinfo.dart';
 import 'stats.dart';
 
 class Profile extends StatelessWidget {

@@ -7,7 +7,7 @@ class PlayerInfoView extends StatelessWidget {
       padding: const EdgeInsets.only(left: 20, right: 15, top: 15, bottom: 15),
       child: Container(
         decoration: BoxDecoration(
-            color: Colors.white,
+            color: Colors.grey[200],
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(8.0),
               bottomLeft: Radius.circular(8.0),

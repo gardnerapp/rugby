@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-//TODO Refactor each view so they reside in the same shape
-//TODO Refac text Styles
+//TODO Wrap containers in something that will allow them to adjust their size to the data being fed
+//Triple digit stats will cause pixel overflow
 
 class Stats extends StatelessWidget {
   @override
@@ -23,7 +22,6 @@ class Stats extends StatelessWidget {
     );
   }
 }
-
 
 class StatContainer extends StatelessWidget {
   final Widget child;
@@ -96,13 +94,7 @@ class OffenseView extends StatelessWidget {
         Text(
           "Offense\n",
           textAlign: TextAlign.center,
-          style: TextStyle(
-            //TODO Refactor
-            fontWeight: FontWeight.bold,
-            fontSize: 22,
-            letterSpacing: .2,
-            color: Colors.black,
-          ),
+          style: primaryStatTitle()
         ),
         Expanded(
           child: Padding(
@@ -112,16 +104,9 @@ class OffenseView extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  '5 Tries\n'
-                  '2 Field Goals',
-                  style: TextStyle(
-                    //TODO Refactor
-                    fontWeight: FontWeight.w700,
-                    fontSize: 15,
-                    letterSpacing: 0.2,
-                    color: Colors.black,
-                  ),
-                ),
+                    '5 Tries\n'
+                    '2 Assists',
+                    style: secondaryStatTitle())
               ],
             ),
           ),
@@ -133,23 +118,13 @@ class OffenseView extends StatelessWidget {
             Text(
               "29",
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.w500,
-                fontSize: 24,
-                letterSpacing: 0.2,
-                color: Colors.black,
-              ),
+              style: tertiaryStatTitle()
             ),
             Padding(
               padding: const EdgeInsets.only(left: 4, bottom: 3),
               child: Text(
                 "Points",
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 12,
-                  letterSpacing: 0.2,
-                  color: Colors.black,
-                ),
+                style: quarternaryStatTitle()
               ),
             )
           ],
@@ -179,12 +154,7 @@ class DefenseView extends StatelessWidget {
         Text(
           "Defense\n",
           textAlign: TextAlign.center,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 22,
-            letterSpacing: .2,
-            color: Colors.black,
-          ),
+          style: primaryStatTitle()
         ),
         Expanded(
           child: Padding(
@@ -196,12 +166,7 @@ class DefenseView extends StatelessWidget {
                 Text(
                   '15 Downs\n'
                   '2 Turnovers',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 15,
-                    letterSpacing: 0.2,
-                    color: Colors.black,
-                  ),
+                  style: secondaryStatTitle()
                 ),
               ],
             ),
@@ -214,23 +179,13 @@ class DefenseView extends StatelessWidget {
             Text(
               "17",
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.w500,
-                fontSize: 24,
-                letterSpacing: 0.2,
-                color: Colors.black,
-              ),
+              style: tertiaryStatTitle()
             ),
             Padding(
               padding: const EdgeInsets.only(left: 4, bottom: 3),
               child: Text(
                 "Stops",
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 12,
-                  letterSpacing: 0.2,
-                  color: Colors.black,
-                ),
+                style: quarternaryStatTitle()
               ),
             )
           ],
@@ -250,12 +205,7 @@ class PenaltyView extends StatelessWidget {
         Text(
           "Foul Play \n",
           textAlign: TextAlign.center,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 22,
-            letterSpacing: .2,
-            color: Colors.black,
-          ),
+          style: primaryStatTitle()
         ),
         Expanded(
           child: Padding(
@@ -267,12 +217,7 @@ class PenaltyView extends StatelessWidget {
                 Text(
                   '2 Yellows\n'
                   '0 Reds',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 15,
-                    letterSpacing: 0.2,
-                    color: Colors.black,
-                  ),
+                  style: secondaryStatTitle()
                 ),
               ],
             ),
@@ -285,23 +230,13 @@ class PenaltyView extends StatelessWidget {
             Text(
               "-2",
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.w500,
-                fontSize: 24,
-                letterSpacing: 0.2,
-                color: Colors.black,
-              ),
+              style: tertiaryStatTitle()
             ),
             Padding(
               padding: const EdgeInsets.only(left: 4, bottom: 3),
               child: Text(
                 "Penalties",
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 12,
-                  letterSpacing: 0.2,
-                  color: Colors.black,
-                ),
+                style: quarternaryStatTitle()
               ),
             )
           ],
@@ -320,3 +255,34 @@ class PenaltyView extends StatelessWidget {
     );
   }
 }
+
+TextStyle primaryStatTitle(){
+  return TextStyle(fontWeight: FontWeight.w700,
+    fontSize: 20,
+    letterSpacing: 0.2,
+    color: Colors.black,);
+}
+
+TextStyle secondaryStatTitle() {
+  return TextStyle(fontWeight: FontWeight.w600,
+    fontSize: 16,
+    letterSpacing: 0.2,
+    color: Colors.black,);
+}
+
+TextStyle tertiaryStatTitle(){
+  return TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: 27,
+    letterSpacing: 0.2,
+    color: Colors.black,
+  );
+}
+
+TextStyle quarternaryStatTitle(){
+  return TextStyle( fontWeight: FontWeight.w700,
+  fontSize: 14,
+  letterSpacing: 0.2,
+  color: Colors.black);
+}
+
